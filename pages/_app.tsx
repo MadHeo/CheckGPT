@@ -4,7 +4,7 @@ import { RecoilRoot } from "recoil";
 import { Global } from "@emotion/react";
 import { GlobalStyle } from "../src/commons/globalStyles/globalStyles";
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <RecoilRoot>
       <>
