@@ -5,6 +5,11 @@ import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+interface IFetchData {
+  id: string;
+  title: string;
+}
+
 export default function CommentList(): JSX.Element {
   const [userData, setUserData] = useState([]);
 
@@ -25,7 +30,7 @@ export default function CommentList(): JSX.Element {
   return (
     <>
       <S.Container>
-        {userData?.map((el) => (
+        {userData?.map((el: IFetchData) => (
           <>
             <S.NameBox>{el.id}</S.NameBox>
             <S.ContentsBox>{el.title}</S.ContentsBox>
