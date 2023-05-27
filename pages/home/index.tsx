@@ -1,11 +1,11 @@
 import axios from "axios";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import usePageRouter from "../../src/commons/hooks/useRouter";
 
 export default function HomePage() {
   const [userData, setUserData] = useState([]);
   const [post, setPost] = useState([]);
-  const router = useRouter();
+  const { push } = usePageRouter();
 
   const fetchUser = async () => {
     const result: any = await axios
@@ -36,7 +36,7 @@ export default function HomePage() {
   return (
     <>
       <div>gd</div>
-      <button onClick={() => router.push("/comment")}>comment</button>
+      <button onClick={() => push("/comment")}>comment</button>
       <div>
         {userData?.map((el: any) => (
           <>

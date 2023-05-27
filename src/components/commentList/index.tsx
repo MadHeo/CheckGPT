@@ -1,7 +1,4 @@
 import * as S from "./style";
-import ListGroup from "react-bootstrap/ListGroup";
-import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
