@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import usePageRouter from "../../src/commons/hooks/useRouter";
 
-export default function HomePage() {
+export default function APITest() {
   const [userData, setUserData] = useState([]);
   const [post, setPost] = useState([]);
   const { push } = usePageRouter();
