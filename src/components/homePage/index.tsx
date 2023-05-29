@@ -12,6 +12,10 @@ export default function HomePage() {
         <S.LogoBox>
           <div>CHECK GPT</div>
         </S.LogoBox>
+        <S.SubTextBox>
+          <div>인공지능, 우리는 어떻게 이용하고</div>
+          <div>또, 오떻게 이용 당하고 있을까</div>
+        </S.SubTextBox>
       </S.Container>
     </>
   );
