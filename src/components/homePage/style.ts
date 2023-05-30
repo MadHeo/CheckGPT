@@ -1,3 +1,4 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 
 export const Container = styled.div`
@@ -15,9 +16,24 @@ export const TextBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding: 35px;
-  font-size: 40px;
-  margin-bottom: 225px;
+  padding: 48px;
+  font-size: 36px;
+  margin-bottom: 150px;
+`;
+
+export const floating = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    15%{
+        transform: translateY(0px)
+    }
+    100% {
+        opacity: 100;
+        visibility: visible;
+        
+    }
 `;
 
 export const LogoBox = styled.div`
@@ -27,6 +43,8 @@ export const LogoBox = styled.div`
   font-size: 230px;
   font-weight: 700;
   margin-bottom: 250px;
+  visibility: hidden;
+  animation: ${floating} 2.5s ease-in-out 0.5s 1 forwards;
 `;
 
 export const SubTextBox = styled.div`
@@ -39,4 +57,14 @@ export const SubTextBox = styled.div`
   align-items: center;
   font-size: 40px;
   margin-bottom: 300px;
+  visibility: hidden;
+
+  .visible {
+    animation: ${floating} 1.5s ease-in-out 0.5s 1 forwards;
+    text-align: center;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
 `;

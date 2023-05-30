@@ -7,7 +7,6 @@ interface IFetchData {
   title: string;
 }
 
-export default function CommentList(): JSX.Element {
   const [userData, setUserData] = useState([]);
 
   const fetchUser = async () => {

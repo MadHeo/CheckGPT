@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
 import * as S from "./style";
 
 export default function HomePage() {
+  const [position, setPosition] = useState(0);
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    const updateScroll = () => {
+      setPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", updateScroll);
+  }, []);
+
   return (
     <>
       <S.Container>
@@ -13,8 +25,10 @@ export default function HomePage() {
           <div>CHECK GPT</div>
         </S.LogoBox>
         <S.SubTextBox>
-          <div>인공지능, 우리는 어떻게 이용하고</div>
-          <div>또, 오떻게 이용 당하고 있을까</div>
+          <div className={position < 400 ? "hidden" : "visible"}>
+            <div>인공지능, 우리는 어떻게 이용하고</div>
+            <div>어떻게 이용 당하고 있을까</div>
+          </div>
         </S.SubTextBox>
       </S.Container>
     </>
