@@ -1,4 +1,4 @@
-import CommentList from "../../src/components/commentList";
+import CommentList from "../comment";
 
 export default function CommentListPage(): JSX.Element {
   return (

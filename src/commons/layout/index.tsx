@@ -1,11 +1,19 @@
-import HomePage from "../../components/homePage";
+import styled from "@emotion/styled";
 import HeaderLayout from "./header";
 
-export default function Layout(): JSX.Element {
+const MainBox = styled.div`
+  width: 100%;
+  height: 100%;
+`;
+
+export default function Layout(props): JSX.Element {
   return (
     <>
       <HeaderLayout></HeaderLayout>
-      <HomePage></HomePage>
+      <MainBox>
+        <div>{props.children}</div>
+      </MainBox>
+      {/* <HomePage></HomePage> */}
     </>
   );
 }
