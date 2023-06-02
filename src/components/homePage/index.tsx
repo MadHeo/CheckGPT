@@ -3,7 +3,6 @@ import * as S from "./style";
 
 export default function HomePage() {
   const [position, setPosition] = useState(0);
-  const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
     const updateScroll = () => {

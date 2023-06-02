@@ -6,14 +6,17 @@ const MainBox = styled.div`
   height: 100%;
 `;
 
-export default function Layout(props): JSX.Element {
+interface ILayoutProps {
+  children: JSX.Element;
+}
+
+export default function Layout(props: ILayoutProps) {
   return (
     <>
       <HeaderLayout></HeaderLayout>
       <MainBox>
         <div>{props.children}</div>
       </MainBox>
-      {/* <HomePage></HomePage> */}
     </>
   );
 }

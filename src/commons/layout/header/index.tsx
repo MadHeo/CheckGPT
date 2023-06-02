@@ -1,14 +1,20 @@
-import { MouseEvent } from "react";
 import usePageRouter from "../../hooks/useRouter";
 import * as S from "./style";
+import Image from "next/image";
+import logo from "../../../../public/image/GPT_logo.png";
 
-const headerName = ["chart", "survey", "comment"];
+const headerName = [
+  { Home: "/" },
+  { Chart: "chart" },
+  { Survey: "survey" },
+  { Comment: "comment" },
+];
 
 export default function HeaderLayout(): JSX.Element {
   const { push } = usePageRouter();
 
-  const onClickMenu = (e: MouseEvent<HTMLButtonElement> | string) => {
-    push(e.target.textContent);
+  const onClickMenu = (value: string) => () => {
+    push(value);
   };
 
   return (
@@ -16,7 +22,9 @@ export default function HeaderLayout(): JSX.Element {
       <S.MainBox>
         {headerName.map((el, i) => (
           <>
-            <button onClick={onClickMenu}>{el}</button>
+            <button onClick={onClickMenu(String(Object.values(el)))}>
+              {Object.keys(el)}
+            </button>
           </>
         ))}
       </S.MainBox>

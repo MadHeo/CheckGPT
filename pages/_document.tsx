@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta property="og:title" content="GROOMEONG" />
+        <meta property="og:title" content="CheckGPT" />
         <meta
           property="og:description"
-          content="반려견을 더욱 사랑스럽게, 더욱 건강하게, GROOMEONG"
+          content="인공지능, 어떻게 할용하시나요."
         />
         <link
           rel="shortcut icon"

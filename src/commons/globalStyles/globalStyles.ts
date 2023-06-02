@@ -6,6 +6,7 @@ export const GlobalStyle = css`
     box-sizing: border-box;
     font-family: "Noto-500";
     background-color: #151515;
+    color: white;
   }
 
   @font-face {
