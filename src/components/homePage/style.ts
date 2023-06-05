@@ -18,7 +18,7 @@ export const TextBox = styled.div`
   align-items: end;
   padding: 48px;
   font-size: 36px;
-  margin-bottom: 200px;
+  margin-bottom: 230px;
   font-weight: 300;
 `;
 
@@ -41,7 +41,7 @@ export const LogoBox = styled.div`
   width: 100%;
   height: 100%;
   color: white;
-  font-size: 230px;
+  font-size: 200px;
   font-weight: 700;
   margin-bottom: 250px;
   visibility: hidden;
