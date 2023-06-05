@@ -18,7 +18,8 @@ export const TextBox = styled.div`
   align-items: end;
   padding: 48px;
   font-size: 36px;
-  margin-bottom: 150px;
+  margin-bottom: 200px;
+  font-weight: 300;
 `;
 
 export const floating = keyframes`
@@ -58,6 +59,7 @@ export const SubTextBox = styled.div`
   font-size: 40px;
   margin-bottom: 300px;
   visibility: hidden;
+  font-weight: 300;
 
   .visible {
     animation: ${floating} 1.5s ease-in-out 0.5s 1 forwards;

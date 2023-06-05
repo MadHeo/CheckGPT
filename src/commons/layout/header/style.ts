@@ -8,7 +8,7 @@ export const MainBox = styled.div`
   justify-content: center;
   align-items: center;
   border-bottom: 0.5px solid white;
-  gap: 64px;
+  gap: 6%;
 
   button {
     color: white;
